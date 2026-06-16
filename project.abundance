@@ -249,8 +249,8 @@
     },
     {
       "atomType": "Rotate",
-      "x": 0.8148148148148148,
-      "y": 0.6473988439306358,
+      "x": 0.7705026455026456,
+      "y": 0.6589595375722543,
       "uniqueID": "id-678",
       "ioValues": [
         {
@@ -549,9 +549,10 @@
     },
     {
       "atomType": "Tag",
-      "x": 0.5370370370370371,
-      "y": 0.7196531791907514,
+      "x": 0.5496031746031745,
+      "y": 0.6329479768786127,
       "uniqueID": "id-733",
+      "name": "Mount",
       "ioValues": [
         {
           "name": "geometry",
@@ -559,7 +560,7 @@
         }
       ],
       "tags": [
-        ""
+        "Mount"
       ]
     },
     {
@@ -590,6 +591,77 @@
         }
       ],
       "selectedColor": "Mauve "
+    },
+    {
+      "atomType": "Move",
+      "x": 0.841931216931217,
+      "y": 0.638728323699422,
+      "uniqueID": "id-744",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 0,
+          "currentEquation": "0"
+        },
+        {
+          "name": "yDist",
+          "ioValue": 150,
+          "currentEquation": "150"
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "ExtractTag",
+      "x": 0.8141534391534391,
+      "y": 0.3439306358381503,
+      "uniqueID": "id-750",
+      "name": "Extract Mount",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "tag": "Mount",
+      "tagIndex": 0
+    },
+    {
+      "atomType": "Export",
+      "x": 0.9087301587301588,
+      "y": 0.2630057803468208,
+      "uniqueID": "id-753",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STEP",
+          "currentEquation": "STEP"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "Telescope_Finder_Mount",
+          "currentEquation": "Telescope_Finder_Mount"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "Telescope_Finder_Mount"
     }
   ],
   "allConnectors": [
@@ -624,14 +696,14 @@
       "ap2ID": "id-684"
     },
     {
+      "ap2Name": "geometry",
+      "ap1ID": "id-678",
+      "ap2ID": "id-744"
+    },
+    {
       "ap2Name": "Shape",
       "ap1ID": "id-684",
       "ap2ID": "id-700"
-    },
-    {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-700",
-      "ap2ID": "id-627"
     },
     {
       "ap2Name": "Shape 2",
@@ -667,6 +739,21 @@
       "ap2Name": "Shape 1",
       "ap1ID": "id-741",
       "ap2ID": "id-736"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-744",
+      "ap2ID": "id-627"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-744",
+      "ap2ID": "id-750"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-750",
+      "ap2ID": "id-753"
     }
   ],
   "unitsKey": "MM",
